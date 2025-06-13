@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Agency</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+    
+</head>
+<body>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <span></span><span>Famedia</span>
+            </a>
+        </div>
+        <div class="nav-list">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about-us" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Profile</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+    <!-- End of Menu -->
+    
+    <div class="container">
+        <!-- Section 1 -->
+        <section class="section-1" id="home">
+            <div class="banner">
+                <h1 class="banner-heading">
+                    <span class="heading-1">Business Ideas</span>
+                    <span class="heading-2">Consulting</span>
+                    <span class="heading-3">Digital Marketing</span>
+                    <span class="heading-4">Strategy</span>
+                </h1>
+                <p class="banner-paragraph">Let's Work Together</p>
+                <button class="banner-btn" onclick="location.href='profile.html'">Discover Now</button>
+            </div>
+        </section>
+        <!-- End of Section 1 -->
+
+        <!-- Section 2 -->
+        <section class="section-2" id="about-us">
+            <h1 class="section-heading">About Us</h1>
+            <div class="section-heading-line"></div>
+            <div class="video-wrapper">
+              <video class="video" src="{% static 'images/about.mp4' %}"></video>
+              <div class="controls">
+                    <div class="video-bar-wrapper">
+                        <div class="video-bar"></div>
+                    </div>
+                    <div class="buttons">
+                        <button>
+                            <i class="far fa-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="section-2-paragraph">
+                <i class="fas fa-quote-left"></i>
+                  At our company, we're not interested in playing it safe. We're here to shake things up and disrupt the influencer marketing industry with our innovative approach. We're a team of influencer marketing experts who know how to identify the right influencers, create engaging content, and deliver real results.
+                <i class="fas fa-quote-right"></i>
+            </p>
+        </section>
+        <!-- End of Section 2 -->
+
+        <section class="section-5" id="services">
+            <h2 class="services-heading">Our Services</h2>
+            <div class="services-container">
+              <div class="service-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Marketing</h3>
+                <p>Reach your audience with our strategic marketing campaigns tailored for maximum impact.</p>
+              </div>
+              <div class="service-card">
+                <i class="fas fa-photo-video"></i>
+                <h3>Photo & Video Editing</h3>
+                <p>Professional photo and video editing services that enhance your content to stand out online.</p>
+              </div>
+              <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Website Development</h3>
+                <p>We build modern, responsive websites to help your brand grow and engage with audiences.</p>
+              </div>
+            </div>
+          </section>
+
+          
+          
+          
+        <!-- End of Section 3 -->
+
+        <!-- Section 4 -->
+        <section class="section-4" id="contact">
+            <h1 class="section-heading">Contact</h1>
+            <div class="section-heading-line"></div>
+            <div class="contact-wrapper">
+                <div class="contact-details">
+                    <div class="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+123 456 789</p>
+                        <p>+987 654 321</p>
+                    </div>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Main Street #123</p>
+                        <p>Wall Street #123</p>
+                    </div>
+                    <div class="email">
+                        <i class="far fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@gmail.com</p>
+                        <p>sales@gmail.com</p>
+                    </div>
+                </div>
+                <h1>Get in Touch</h1>
+                <form class="contact-form" method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="fname">First Name*</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="surname">Surname*</label>
+                        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                      </div>
+                    </div>
+                  
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                      </div>
+                    </div>
+                  
+                    <div class="form-groups">
+                      <label for="reason">Reason for Contact*</label>
+                      <select id="reason" name="reason" required>
+                        <option value="">Please select</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="business">Business Inquiry</option>
+                        <option value="support">Support</option>
+                      </select>
+                    </div>
+                  
+                    <div class="form-groups">
+                      <label for="country">Country*</label>
+                      <select id="country" name="country" required>
+                        <option value="">Please select</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                      </select>
+                    </div>
+                  
+                    <div class="form-groups">
+                      <label for="message">Please add some context*</label>
+                      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                  
+                    <div class="form-submit-wrapper">
+                        <input type="submit" value="Send Message">
+                      </div>
+                      
+                  </form>
+                  
+            </div>
+        </section>
+        <!-- End of Section 4 -->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-icons">
+                <a href="https://facebook.com/yourprofile"  target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:business@famedia.in" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+        </footer>
+        <!-- End of Footer -->
+    </div>
+
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
