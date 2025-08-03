@@ -17,7 +17,7 @@ import dj_database_url
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['famedia.onrender.com']  # replace with your Render subdomain
+ALLOWED_HOSTS = ['Business_Agency_Websitte.onrender.com']  # replace with your Render subdomain
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
@@ -42,7 +42,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_5$8azkv(0t&@uavew3bbikr#=ep*(gg%ew+k)%*em(fqvgcl&'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
