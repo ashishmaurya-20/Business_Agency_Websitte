@@ -17,7 +17,7 @@ import dj_database_url
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['famedia.onrender.com']  # replace with your Render subdomain
+ALLOWED_HOSTS = ['Business_Agency_Websitte.onrender.com']  # replace with your Render subdomain
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
