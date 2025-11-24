@@ -47,7 +47,7 @@ SECRET_KEY = "django-insecure-_5$8azkv(0t&@uavew3bbikr#=ep*(gg%ew+k)%*em(fqvgcl&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['yourusername.pythonanywhere.com', 'famedia.in', 'www.famedia.in']
+ALLOWED_HOSTS = ['yourusername.pythonanywhere.com', 'famedia.in', 'www.famedia.in','127.0.0.1']
 
 
 
